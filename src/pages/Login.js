@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -13,7 +13,8 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import { useLocation, useHistory } from "react-router-dom";
-
+import { baseUrl } from "./constants"
+import axios from "axios";
 function Copyright() {
     return (
         <Typography variant="body2" color="textSecondary" align="center">
@@ -63,6 +64,38 @@ export default function LoginPage() {
     const history = useHistory();
     const location = useLocation();
 
+    const [cpf, setCPF] = useState("")
+    const [password, setPassword] = useState("")
+    const [loading, setLoading] = useState(false);
+
+
+    function signIn() {
+        setLoading(true);
+        var data = JSON.stringify({ "cpf": cpf, "password": password });
+
+        var config = {
+            method: 'post',
+            url: `${baseUrl}users/auth`,
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            data: data
+        };
+        axios(config)
+            .then(function (response) {
+                console.log(JSON.stringify(response.data));
+                localStorage.setItem("token", response.data.token.token);
+                localStorage.setItem("cpf", cpf);
+                setLoading(false);
+                //TODO: Alterar para rota da home
+                history.push('/home')
+            })
+            .catch(function (error) {
+                console.log(error);
+                setLoading(false);
+            });
+    }
+
     return (
         <Grid container component="main" className={classes.root}>
             <CssBaseline />
@@ -86,6 +119,8 @@ export default function LoginPage() {
                             name="email"
                             autoComplete="email"
                             autoFocus
+                            value={cpf}
+                            onChange={(e) => setCPF(e.target.value)}
                         />
                         <TextField
                             variant="outlined"
@@ -97,19 +132,22 @@ export default function LoginPage() {
                             type="password"
                             id="password"
                             autoComplete="current-password"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
                         />
                         <FormControlLabel
                             control={<Checkbox value="remember" color="primary" />}
                             label="Lembrar"
                         />
                         <Button
-                            type="submit"
+
                             fullWidth
                             variant="contained"
                             color="primary"
                             className={classes.submit}
                             onClick={() => {
-                                history.push('/home');
+                                // history.push('/home');
+                                signIn();
                             }}
                         >
                             Fazer Login

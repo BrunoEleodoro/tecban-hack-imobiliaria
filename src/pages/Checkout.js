@@ -13,6 +13,7 @@ import Typography from '@material-ui/core/Typography';
 import AddressForm from './AddressForm';
 import PaymentForm from './PaymentForm';
 import Review from './Review';
+import QRCodePage from './QRCodePage';
 
 function Copyright() {
     return (
@@ -64,14 +65,14 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-const steps = ['Shipping address', 'Payment details', 'Review your order'];
+const steps = ['Consentimento', 'Dados', 'Confirmacao'];
 
 function getStepContent(step) {
     switch (step) {
         case 0:
-            return <AddressForm />;
+            return <QRCodePage />
         case 1:
-            return <PaymentForm />;
+            return <AddressForm />;
         case 2:
             return <Review />;
         default:
@@ -104,7 +105,7 @@ export default function Checkout() {
             <main className={classes.layout}>
                 <Paper className={classes.paper}>
                     <Typography component="h1" variant="h4" align="center">
-                        Checkout
+                        Cobertura
           </Typography>
                     <Stepper activeStep={activeStep} className={classes.stepper}>
                         {steps.map((label) => (
