@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.5f361e03.chunk.css",
-    "main.js": "/static/js/main.83f5c97f.chunk.js",
-    "main.js.map": "/static/js/main.83f5c97f.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.5295aa5d.js",
-    "runtime-main.js.map": "/static/js/runtime-main.5295aa5d.js.map",
-    "static/js/2.cea7fce9.chunk.js": "/static/js/2.cea7fce9.chunk.js",
-    "static/js/2.cea7fce9.chunk.js.map": "/static/js/2.cea7fce9.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.48edd4cd601ad56b8a3abafd33201e61.js": "/precache-manifest.48edd4cd601ad56b8a3abafd33201e61.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.5f361e03.chunk.css.map": "/static/css/main.5f361e03.chunk.css.map",
-    "static/js/2.cea7fce9.chunk.js.LICENSE.txt": "/static/js/2.cea7fce9.chunk.js.LICENSE.txt",
-    "static/media/logo.svg": "/static/media/logo.5d5d9eef.svg"
+    "main.css": "/tecban-hack-imobiliaria/static/css/main.5f361e03.chunk.css",
+    "main.js": "/tecban-hack-imobiliaria/static/js/main.9305580e.chunk.js",
+    "main.js.map": "/tecban-hack-imobiliaria/static/js/main.9305580e.chunk.js.map",
+    "runtime-main.js": "/tecban-hack-imobiliaria/static/js/runtime-main.96ce416b.js",
+    "runtime-main.js.map": "/tecban-hack-imobiliaria/static/js/runtime-main.96ce416b.js.map",
+    "static/js/2.c8f0e3d1.chunk.js": "/tecban-hack-imobiliaria/static/js/2.c8f0e3d1.chunk.js",
+    "static/js/2.c8f0e3d1.chunk.js.map": "/tecban-hack-imobiliaria/static/js/2.c8f0e3d1.chunk.js.map",
+    "index.html": "/tecban-hack-imobiliaria/index.html",
+    "precache-manifest.402f0d10842218ce6ac7ac3ac5567949.js": "/tecban-hack-imobiliaria/precache-manifest.402f0d10842218ce6ac7ac3ac5567949.js",
+    "service-worker.js": "/tecban-hack-imobiliaria/service-worker.js",
+    "static/css/main.5f361e03.chunk.css.map": "/tecban-hack-imobiliaria/static/css/main.5f361e03.chunk.css.map",
+    "static/js/2.c8f0e3d1.chunk.js.LICENSE.txt": "/tecban-hack-imobiliaria/static/js/2.c8f0e3d1.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/tecban-hack-imobiliaria/static/media/logo.5d5d9eef.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.5295aa5d.js",
-    "static/js/2.cea7fce9.chunk.js",
+    "static/js/runtime-main.96ce416b.js",
+    "static/js/2.c8f0e3d1.chunk.js",
     "static/css/main.5f361e03.chunk.css",
-    "static/js/main.83f5c97f.chunk.js"
+    "static/js/main.9305580e.chunk.js"
   ]
 }
